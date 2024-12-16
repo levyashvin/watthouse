@@ -134,7 +134,3 @@ Use the following command to run the app on a connected device or emulator:
 ```bash
 flutter run
 ```
-
-**Remember to replace `your-username` with your actual GitHub username.** 
-
-**Also, ensure you have the necessary API keys and configurations set up in your Firebase project and Google Cloud Platform.**
