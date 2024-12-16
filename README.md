@@ -1,6 +1,3 @@
-**Here's the copy-paste content for your README.md:**
-
-```markdown
 # WattHouse
 
 *Empowering EV owners with a community-driven charging solution.*
