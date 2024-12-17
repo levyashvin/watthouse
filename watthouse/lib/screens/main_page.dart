@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
+  const MainPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Nearby EV Locations")),
-      body: Column(
+      appBar: AppBar(title: const Text("Nearby EV Locations")),
+      body: const Column(
         children: [
           Expanded(
             child: Center(
@@ -32,8 +34,8 @@ class MainPage extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, '/registerLocation');
         },
-        child: Icon(Icons.add_location),
         tooltip: "Register EV Location",
+        child: Icon(Icons.add_location),
       ),
     );
   }

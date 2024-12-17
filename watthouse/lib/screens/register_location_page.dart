@@ -4,10 +4,12 @@ class RegisterLocationPage extends StatelessWidget {
   final _addressController = TextEditingController();
   final _descriptionController = TextEditingController();
 
+  RegisterLocationPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Register EV Location")),
+      appBar: AppBar(title: const Text("Register EV Location")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -15,25 +17,25 @@ class RegisterLocationPage extends StatelessWidget {
           children: [
             TextField(
               controller: _addressController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Address",
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               controller: _descriptionController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Description",
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text("Submit"),
+              child: const Text("Submit"),
             ),
           ],
         ),
