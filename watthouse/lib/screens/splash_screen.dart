@@ -12,11 +12,11 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/logo.png', height: 100), // Add your logo here
+            Icon(Icons.ev_station, size: 100, color: Colors.blue),
             SizedBox(height: 20),
             Text(
-              "ElectriNest", // App name
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              "WattHouse",
+              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
             ),
           ],
         ),

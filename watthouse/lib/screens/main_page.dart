@@ -1,40 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class MainPage extends StatefulWidget {
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  late GoogleMapController mapController;
-  final Set<Marker> _markers = {};
-
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-    setState(() {
-      // Add demo markers
-      _markers.add(
-        Marker(
-          markerId: MarkerId('1'),
-          position: LatLng(37.7749, -122.4194), // Example coordinates
-          infoWindow: InfoWindow(title: 'Home Charger'),
-        ),
-      );
-    });
-  }
-
+class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Nearby EV Locations")),
-      body: GoogleMap(
-        onMapCreated: _onMapCreated,
-        initialCameraPosition: CameraPosition(
-          target: LatLng(37.7749, -122.4194), // Center map
-          zoom: 12,
-        ),
-        markers: _markers,
+      body: Column(
+        children: [
+          Expanded(
+            child: Center(
+              child: Text(
+                "Map Placeholder\n(Imagine a map here!)",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18, color: Colors.grey),
+              ),
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.ev_station, color: Colors.green),
+            title: Text("Home EV Charger 1"),
+            subtitle: Text("123 Main Street, Available"),
+          ),
+          ListTile(
+            leading: Icon(Icons.ev_station, color: Colors.orange),
+            title: Text("Home EV Charger 2"),
+            subtitle: Text("456 Elm Street, In Use"),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
